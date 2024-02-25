@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="./style/style.css" rel="stylesheet">
+    <title>
+        WHAT ? NAH
+    </title>
+</head>
+<body>
+  <header class="logo-nav">
+        <img class="logo" src="./images/WNlogo.png" alt="Band Logo">
+    <nav class="navbar">
+    <ul>
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="music.html">MUSIC</a></li>
+    <li><a href= "merch.html">MERCH</a></li>
+    <li><a href="gigs.html">GIGS</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    </nav>
+</header>
+ <!--create buttons here-->
+    <div class="page" id="homepage-flexbox">
+         <div class="video-div">
+            <div class="aspect-ratio">
+            <iframe id ="video-embed" width="420" height="315"
+            src="https://www.youtube.com/embed/JwJgh_wusv4?&loop=1&autoplay=1&mute=1">
+            </iframe>
+            </div>
+         </div>
+         <main class="homepage">
+          <div id="social-buttons">
+            <a class="social-button" href="https://open.spotify.com/artist/12zJUOk2H41NBQLe0n2Pub?autoplay=true"><img src="./images/spotifyicon.png">  </a>
+            <a class="social-button" href="https://music.apple.com/gb/artist/what-nah/1542037315"><img src="./images/applemusicicon.png">  </a>
+            <a class="social-button" href="https://www.youtube.com/channel/UCWZGYHIF7TE3XHE6POjA1YA"><img src="./images/youtubeicon.png">  </a>
+            <a class="social-button" href="https://what-nah.bandcamp.com/"><img src="./images/bandcampicon.png">  </a>
+            <a class="social-button" href="https://www.instagram.com/whatnahband/"><img src="./images/instagramicon.png">  </a>
+          </div>
+        <p>. scintilla EP out now .</p>
+        </main>
+       </div>
+      <script>
+         function changeColor(element) {
+         var socialButtons = document.querySelectorAll('.social-buttons');
+         socialButtons.forEach( function  (button) {
+          button.classList.remove('clicked');
+          element.classList.add('clicked');
+         });
+         }
+         </script>
+</body>
+</html>
