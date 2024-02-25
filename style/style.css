@@ -27,6 +27,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    background-attachment: fixed;
     font-family: "NaomisHand";
 } 
 .logo-nav {
@@ -222,6 +223,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
         background-position: bottom;
+        background-attachment: fixed;
     }
     .page {
         height: 100%;
@@ -251,7 +253,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         max-width: 250px;
     }
     .homepage {
-      width: auto;
+      width: fit-content;
       max-width: 400px;
       padding: 0.5rem;
       font-size: 2.5em;
@@ -261,5 +263,11 @@ filter: saturate(70%) hue-rotate(-90deg);
         width: 80%;
         height: 0;
         padding-bottom: 60%;
+    }
+    #merch-picture {
+        min-width: none;
+        min-height: none;
+        width: 60vw;
+        height: 40vw;
     }
 }
