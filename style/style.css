@@ -144,6 +144,7 @@ body {
     margin: 0.5rem;
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 1rem;
 }
 #social-buttons {
   display: flex;
