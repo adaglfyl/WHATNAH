@@ -251,7 +251,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         max-width: 250px;
     }
     .homepage {
-      width: fit-content;
+      width: auto;
       max-width: 400px;
       padding: 0.5rem;
       font-size: 2.5em;
