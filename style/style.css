@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "NaomisHand";
+    src: url(./NaomisHand-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+ li a:link {
+    color: #fffec2;
+    text-decoration: none;
+ }
+ li a:visited {
+    color: #fffec2;
+    text-decoration: none;
+ }
+ li a:active {
+    color: #ef8d6b;
+ }
+body {
+    text-align: center;
+    background-color: #36297b;
+    background-image: url(../images/Scintilla.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-family: "NaomisHand";
+} 
+.logo-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{ 
+    background-blend-mode: unset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+    width: 95vw;
+    max-width: 600px;
+}
+.header {
+    font-size: 70px;
+    margin: 0;
+}
+.navbar ul {
+    font-family: "NaomisHand";
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 75vw;
+    max-width: 600px;
+    gap: 0.05rem;
+}
+.navbar li {
+    border: 2px solid #a29dde;
+    background-color: #7067d1;
+    border-radius: 30px;
+    padding: 2px 5px;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease-in-out;
+}
+.navbar li:hover {
+    transform: scale(1.1);
+    background-color: #a29dde;
+}
+.aboutus {
+    font-family: "NaomisHand";
+    font-size: clamp(30px,  10vw, 40px);
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.25em 1rem;
+    background-color: #37297be4;
+    border-radius: 30px;
+}
+.about {
+  width: 90vw;
+  max-width: 700px;
+  color: #fffec2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border-radius: 30px;
+}
+.homepage {
+    width: 90vw;
+    background-color: #37297be4;
+    border-radius: 30px;
+    color: #fffec2;
+    margin: 1rem 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 400px;
+    padding-top: 0.85rem;
+    font-size: 3.5rem;
+    font-family: "NaomisHand";
+    line-height: 0.05rem;
+  }
+.homepage p {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+.video-div {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+    max-height: 75%
+}
+#band-picture {
+    max-width: 700px;
+    width: 90vw;
+    border-radius: 20px;
+    border: 3px solid #a29dde;
+}
+#video-embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px solid #7067d1;
+    border-radius: 20px;
+}
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+.socials-footer {
+    width: 75vw;
+    max-width: 300px;
+    display: inline-block;
+    background-color: #37297be4;
+    margin: 0.5rem;
+    border-radius: 20px;
+    padding: 10px;
+}
+#social-buttons {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  gap: 0.3em;
+  padding: 0.125em;
+  flex-shrink: 1;
+}
+.social-button {
+    transition: all 0.5s ease-in-out;
+}
+.social-button img {
+    max-width: 100%; 
+    height: auto;
+}
+.social-button:hover {
+transform: scale(120%) translate(0,-5px);
+filter: saturate(70%) hue-rotate(-90deg);
+}
+.clicked {
+    background-color: #fffec2;
+}
+.page {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    .page {
+        height: auto;
+        justify-content: flex-start;
+    }
+    .logo-nav {
+        align-items: center;
+    }
+    .navbar ul {
+        max-width: 300px;
+        flex: 50%;
+        align-content: space-between;
+    }
+    .header {
+        font-size: 3rem;
+    }
+    #social-buttons {
+        max-width: 250px;
+    }
+    .homepage {
+      width: fit-content;
+      max-width: 400px;
+      padding: 0.5rem;
+      font-size: 2.5em;
+    }
+}
