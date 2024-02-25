@@ -225,7 +225,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         background-attachment: fixed;
     }
     .page {
-        height: 100vh;
+        height: 70vh;
         justify-content: space-between;
         align-items: center;
     }
