@@ -224,7 +224,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         background-position: bottom;
     }
     .page {
-        height: 100vh;
+        height: 100%;
         justify-content: space-between;
     }
     .logo-nav {
@@ -253,10 +253,4 @@ filter: saturate(70%) hue-rotate(-90deg);
       font-size: 2.5em;
     }
 }
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-}
+
