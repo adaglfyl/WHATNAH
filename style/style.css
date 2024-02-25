@@ -237,7 +237,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .navbar li  {
         width: 45%;
-        max-width: 100px;
+        max-width: 150px;
         font-size: 30px;
     }
     .header {
