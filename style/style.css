@@ -185,6 +185,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         align-items: center;
     }
     .navbar ul {
+        width: 90vw;
         align-content: space-between;
     }
     .header {
