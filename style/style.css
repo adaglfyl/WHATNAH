@@ -28,10 +28,7 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     font-family: "NaomisHand";
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-between; 
+    display: block;
 } 
 .logo-nav {
     display: flex;
