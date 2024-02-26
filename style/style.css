@@ -36,7 +36,7 @@ body {
     background-position: center top;
     background-attachment: local;
     overflow: auto;
-    height: 100vh;
+    height: 100%;
 }
 .logo-nav {
     display: flex;
@@ -234,8 +234,10 @@ filter: saturate(70%) hue-rotate(-90deg);
     .wrapper {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
-        background-position: center top;
-        background-attachment: local;
+        background-position: center bottom;
+        background-attachment: scroll;
+        overflow: scroll;
+        height: auto;
     }
     .page {
         height: 100%;
