@@ -216,7 +216,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     height: 65vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
