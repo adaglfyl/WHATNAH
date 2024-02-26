@@ -260,7 +260,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     .homepage {
       width: fit-content;
       max-width: 400px;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       padding: 0.5rem;
       font-size: 2.5em;
     }
