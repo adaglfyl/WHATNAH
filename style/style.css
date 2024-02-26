@@ -266,6 +266,9 @@ filter: saturate(70%) hue-rotate(-90deg);
         height: 0;
         padding-bottom: 60%;
     }
+    .video-div {
+        width: 90vw;
+    }
     #merch-picture {
         min-width: none;
         min-height: none;
