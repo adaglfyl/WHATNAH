@@ -231,7 +231,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     body {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
-        background-position: bottom;
+        background-position: center top;
         background-attachment: fixed;
     }
     .page {
