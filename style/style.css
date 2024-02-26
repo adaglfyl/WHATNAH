@@ -246,7 +246,6 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .navbar {
         width: 100%;
-        margin-bottom: 1rem;
     }
     .navbar li  {
         width: 49%;
