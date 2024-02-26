@@ -124,7 +124,7 @@ body {
     display: flex;
     flex-shrink: 1;
     justify-content: center;
-    max-width: 640px;
+    max-width: 480px;
     max-height: 75%
 }
 #band-picture {
