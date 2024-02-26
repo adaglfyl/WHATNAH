@@ -20,15 +20,24 @@ a:hover {
     color:#ffffff;
 }
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-color: #36297b;
     color:#fffec2;
+    font-family: "NaomisHand";
+    overflow: auto;
+    height: 100%;
+} 
+.wrapper {
     background-image: url(../images/Scintilla.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    font-family: "NaomisHand";
-} 
+    background-attachment: local;
+    overflow: auto;
+    height: 100vh;
+}
 .logo-nav {
     display: flex;
     flex-flow: column nowrap;
@@ -116,13 +125,12 @@ body {
 .video-div {
     width: 60vh;
     height: auto;
-    margin: auto;
     display: flex;
     justify-content: center;
     max-width: 640px;
     max-height: 75%;
     min-width: 300px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 #band-picture {
     max-width: 700px;
@@ -221,16 +229,16 @@ filter: saturate(70%) hue-rotate(-90deg);
 }
 
 @media screen and (max-width: 600px),
-       screen and (max-height: 400px) {
-    body {
+       screen and (max-height: 400px),
+       screen and (max-aspect-ratio: ~'1/1') {
+    .wrapper {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background-position: center top;
+        background-attachment: local;
     }
     .page {
         height: 100%;
-        justify-content: space-between;
         align-items: center;
     }
     .navbar ul {
@@ -267,6 +275,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .video-div {
         width: 90vw;
+        margin-bottom: 0;
     }
     #merch-picture {
         min-width: none;
@@ -274,4 +283,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         width: 60vw;
         height: 40vw;
     }
+}
+html {
+  height: 100%;
 }
