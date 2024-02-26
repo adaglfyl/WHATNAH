@@ -67,7 +67,7 @@ body {
     width: 75vw;
     max-width: 600px;
     gap: 0.05rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 .navbar li {
     border: 2px solid #a29dde;
@@ -126,7 +126,7 @@ body {
     max-width: 640px;
     max-height: 75%;
     min-width: 300px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 #band-picture {
     max-width: 700px;
