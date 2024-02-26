@@ -122,7 +122,6 @@ body {
     height: auto;
     margin: auto;
     display: flex;
-    flex-shrink: 1;
     justify-content: center;
     max-width: 480px;
     max-height: 75%;
