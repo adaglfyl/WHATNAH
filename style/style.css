@@ -157,9 +157,9 @@ body {
 }
 .aspect-ratio {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 60%;
 }
 .merch-page {
     width: 90vw;
