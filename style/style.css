@@ -28,7 +28,10 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     font-family: "NaomisHand";
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 } 
 .logo-nav {
     display: flex;
@@ -153,9 +156,9 @@ body {
 }
 .aspect-ratio {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 60%;
 }
 .merch-page {
     width: 90vw;
