@@ -118,12 +118,12 @@ body {
     margin-bottom: 0.5em;
 }
 .video-div {
-    width: 60vh;
+    width: 50vh;
     height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
-    max-width: 480px;
+    max-width: 640px;
     max-height: 75%;
 }
 #band-picture {
