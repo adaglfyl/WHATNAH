@@ -111,7 +111,7 @@ body {
     font-size: 3.5rem;
     font-family: "NaomisHand";
     line-height: 0.05rem;
-    margin: 0.5rem 0 0;
+    margin: 1.5rem 0 0 0;
   }
 .homepage p {
     margin-top: 0.25em;
@@ -242,7 +242,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .navbar {
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     .navbar li  {
         width: 49%;
