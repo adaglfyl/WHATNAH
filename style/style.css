@@ -119,6 +119,7 @@ body {
 }
 .video-div {
     width: 60vh;
+    height: auto;
     margin: auto;
     display: flex;
     flex-shrink: 1;
