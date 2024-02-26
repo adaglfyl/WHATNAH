@@ -238,10 +238,12 @@ filter: saturate(70%) hue-rotate(-90deg);
         background-attachment: scroll;
         overflow: scroll;
         height: auto;
+        min-height: 100%;
     }
     .page {
         height: 100%;
         align-items: center;
+        justify-content: space-evenly;
     }
     .navbar ul {
         width: 90vw;
@@ -250,6 +252,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .navbar {
         width: 100%;
+        margin-top: 1rem;;
     }
     .navbar li  {
         width: 49%;
