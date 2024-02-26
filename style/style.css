@@ -28,6 +28,10 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     font-family: "NaomisHand";
+    display: flex;
+    flex-flow: column no-wrap;
+    justify-content: space-between;
+    align-items: center;
 } 
 .logo-nav {
     display: flex;
