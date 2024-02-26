@@ -227,7 +227,7 @@ filter: saturate(70%) hue-rotate(-90deg);
 }
 
 @media screen and (max-width: 600px),
-       screen and (max-height: 400px) {
+       screen and (max-height: 350px) {
     body {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
