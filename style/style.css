@@ -67,7 +67,7 @@ body {
     width: 75vw;
     max-width: 600px;
     gap: 0.05rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .navbar li {
     border: 2px solid #a29dde;
