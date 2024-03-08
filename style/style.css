@@ -122,6 +122,7 @@ body {
     margin-top: 0.25em;
     margin-bottom: 0.5em;
 }
+
 .video-div {
     width: 60vh;
     height: auto;
@@ -188,6 +189,112 @@ h3 {
     margin: 1rem 0 2rem 0;
 
 }
+.gigs-info {
+    width: 70vw;
+    max-width: 700px;
+    font-size: clamp(20px,  10vw, 35px);
+    background-color: #37297bc8;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+    padding: 1px;
+}
+.gallery-div{
+  height: 60vh;
+  min-height: 150px;
+  width: 80vh;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+}
+.arrow {
+    border: solid #ffffff;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+}
+.gallery-button {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7067d1;
+    border: solid 2px #a29dde;
+    border-radius: 20px;
+}
+.gallery-container {
+  background-color: #a29ddecb;
+  border-radius: 10px;
+  height: 50vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery {
+    background-image: url(../images/gallery/IMG_9249.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    height: 95%;
+    width: 95%;
+    margin: 0.5rem;
+    border-radius: 7px;
+
+    animation-name: gallery-slideshow;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes gallery-slideshow{
+    15%{
+        background-image: url(../images/gallery/IMG_9103.jpg);  
+  }
+    30%{
+        background-image: url(../images/gallery/IMG_9208.jpg);
+  }
+    45%{
+        background-image: url(../images/gallery/IMG_9159.jpg);  
+  }
+    60%{
+        background-image: url(../images/gallery/IMG_9283.jpg);  
+  }
+    80%{
+        background-image: url(../images/gallery/IMG_9210.jpg);  
+  }
+    100%{
+        background-image: url(../images/gallery/IMG_9177.jpg);
+    }
+  }
+.music {
+    background-color: #37297be4;
+    width: 80vw;
+    max-width: 800px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    line-height: 0.5;
+    padding: 0.5rem;
+}
+.spotify-embed iframe {
+    margin: 0.5rem;
+}
 
 .socials-footer {
     width: 75vw;
@@ -214,7 +321,7 @@ h3 {
     height: auto;
 }
 .social-button:hover {
-transform: scale(120%) translate(0,-5px);
+transform: scale(110%) translate(0,-5px);
 filter: saturate(70%) hue-rotate(-90deg);
 }
 .clicked {
@@ -228,9 +335,12 @@ filter: saturate(70%) hue-rotate(-90deg);
     align-items: center;
 }
 
+.current-page a{
+}
+
 @media screen and (max-width: 600px),
        screen and (max-height: 400px),
-       screen and (max-aspect-ratio: ~'1/1') {
+       screen and (max-aspect-ratio: '1/1') {
     .wrapper {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
