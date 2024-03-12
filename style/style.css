@@ -394,7 +394,6 @@ filter: saturate(70%) hue-rotate(-90deg);
     background-color: #fffec2;
 }
 .page {
-    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
