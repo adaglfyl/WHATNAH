@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
 }
+
 a:link {
     color: #fffec2;
     text-decoration: none;
@@ -29,6 +30,14 @@ body {
     overflow: auto;
     height: 100%;
 } 
+main {
+    opacity: 1;
+    animation: fadein 1s linear forwards
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+}
 .wrapper {
     background-image: url(../images/Scintilla.png);
     background-size: cover;
@@ -36,7 +45,12 @@ body {
     background-position: center top;
     background-attachment: local;
     overflow: auto;
-    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .logo-nav {
     display: flex;
@@ -72,7 +86,7 @@ body {
     width: 75vw;
     max-width: 600px;
     gap: 0.05rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
 }
 .navbar li {
     border: 2px solid #a29dde;
@@ -296,6 +310,56 @@ h3 {
     margin: 0.5rem;
 }
 
+.contact-us {
+    background-color: #37297be4;
+    border-radius: 20px;
+    width: 70vw;
+    max-width: 600px !important;
+    min-width: 150px;
+    height: auto;
+    max-height: 240px;
+    margin: auto;
+    font-size: clamp(20px,  5vh, 35px);
+    padding: none;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 95%;
+    height: 100%;
+    margin: 0.5rem;
+    overflow-wrap: break-word;
+    padding: none;
+}
+    .contact-us th {
+    font-size: 7vh;
+}
+td, th {
+  vertical-align: middle;
+  padding: 1%;
+}
+
+.align-left {
+text-align: start;
+}
+
+.align-right {
+text-align: end;
+}
+
+.social-link img{
+    width: 4vh;
+    min-width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+.social-link:hover {
+    filter: saturate(70%) hue-rotate(-90deg);
+    font-weight: bolder;
+    color:#8CEF6B; /* changed due to hue rotation */
+}
+
 .socials-footer {
     width: 75vw;
     max-width: 300px;
@@ -308,13 +372,15 @@ h3 {
 #social-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0.3em;
   padding: 0.125em;
   flex-shrink: 1;
 }
 .social-button {
     transition: all 0.5s ease-in-out;
+    width: 40px;
+    height: auto;
 }
 .social-button img {
     max-width: 100%; 
@@ -328,14 +394,11 @@ filter: saturate(70%) hue-rotate(-90deg);
     background-color: #fffec2;
 }
 .page {
-    height: 65vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-}
-
-.current-page a{
 }
 
 @media screen and (max-width: 600px),
