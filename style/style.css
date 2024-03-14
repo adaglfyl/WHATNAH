@@ -206,6 +206,9 @@ h3 {
     margin: 1rem 0 2rem 0;
 
 }
+.gigs {
+    margin-top: -20px;
+}
 .gigs-info {
     width: 70vw;
     max-width: 700px;
@@ -213,53 +216,90 @@ h3 {
     background-color: #37297bc8;
     border-radius: 10px;
     margin: 0 auto 0 auto;
-    padding: 1px;
+    padding: auto;
 }
-.gallery-div{
-  height: 60vh;
-  min-height: 150px;
-  width: 80vh;
-  max-width: 90vw;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  gap: 1rem;
-  align-items: center;
-  margin: 0 auto 0 auto;
-  overflow: hidden;
+.gallery-container {
+    width: 90vw;
+    max-width: 80vh;
+    aspect-ratio: 1 / 1 !important;
+    margin: 1rem auto;
+    align-items: center;
+    background-color: #37297bc8;
+    border-radius: 10px;
+    padding: 0.75rem;
+  }
+  .frame {
+    padding: 0.5em;
+  }
+  .frame img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    align-items: top center;
+    transition: all ease-in-out 0.5s;
+    position: relative;
+    border: 2px solid #7067d1;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .frame img:hover {
+    transform: scale(105%);
+    z-index: 999;
+    border: 3px solid #a29dde;
+  }
+  .top-row {
+    height: 50%;
+  }
+  .top-left {
+    top: 0;
+    float: left;
+    height: 100%;
+    width: 33%;
+   
+  }
+  .top-right {
+    top: 0;
+    float: right;
+    height: 100%;
+    width: 67%;
+  }
+  .bottom-row {
+    height: 50%;
+  }
+  .bottom-left {
+    bottom: 0;
+    float: left;
+    height: 100%;
+    width: 67%;
+    position: relative;
+   
+  }
+  .bottom-right {
+    bottom: 0;
+    float: right;
+    height: 100%;
+    width: 33%;
+    position: relative;
+  }
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #16112be0;
+    display: none;
+    transition:all ease-in-out 0.5s;
 }
-.arrow {
-    border: solid #ffffff;
-  border-width: 0 5px 5px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-    transform: rotate(-45deg);
-}
-.left {
-    transform: rotate(135deg);
-}
-.gallery-button {
-    width: 40px;
-    height: 50px;
+#lightbox.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7067d1;
-    border: solid 2px #a29dde;
-    border-radius: 20px;
-}
-.gallery-container {
-  background-color: #a29ddecb;
-  border-radius: 10px;
-  height: 50vh;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+} 
+#lightbox img {
+   height: 80vh;
+    width: auto;
+    border-radius: 10px;
 }
 .gallery {
     background-image: url(../images/gallery/IMG_9249.jpg);
@@ -282,7 +322,7 @@ h3 {
 }
 @keyframes gallery-slideshow{
     15%{
-        background-image: url(../images/gallery/IMG_9103.jpg);  
+        background-image: url(images/gallery/IMG_9103.jpg);  
   }
     30%{
         background-image: url(../images/gallery/IMG_9208.jpg);
