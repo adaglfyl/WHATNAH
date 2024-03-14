@@ -1,10 +1,21 @@
-window.transitionToPage = function(href) {
-    document.querySelector('main').style.opacity = 0
-    setTimeout(function() { 
-        window.location.href = href
-    }, 500)
-}
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
 
-document.addEventListener('DOMContentLoaded', function(event) {
-    document.querySelector('main').style.opacity = 1
+const images = document.querySelectorAll('.gallery-img');
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        lightbox.classList.add('active');
+        const img = document.createElement('img');
+        img.src = image.src;
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+    })
+});
+
+lightbox.addEventListener('click', e => {
+   // if (e.target !== e.currentTarget) return // <enable for outside box clicks only
+    lightbox.classList.remove('active')
 })
