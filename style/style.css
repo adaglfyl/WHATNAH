@@ -281,7 +281,7 @@ h3 {
     width: 33%;
     position: relative;
   }
-#lightbox {
+  #lightbox {
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -289,57 +289,40 @@ h3 {
     height: 100%;
     background-color: #16112be0;
     display: none;
-    transition:all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
 }
 #lightbox.active {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 } 
 #lightbox img {
-   height: 80vh;
-    width: auto;
-    border-radius: 10px;
+   height: 85vh;
+   width: auto;
+   max-width: 60vw;
+   object-fit: cover;
+   border-radius: 10px;
 }
-.gallery {
-    background-image: url(../images/gallery/IMG_9249.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 5s;
-    height: 95%;
-    width: 95%;
-    margin: 0.5rem;
-    border-radius: 7px;
 
-    animation-name: gallery-slideshow;
-    animation-direction: alternate;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 30s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+#lightbox a:hover {
+    color: #ef8d6b;
 }
-@keyframes gallery-slideshow{
-    15%{
-        background-image: url(images/gallery/IMG_9103.jpg);  
-  }
-    30%{
-        background-image: url(../images/gallery/IMG_9208.jpg);
-  }
-    45%{
-        background-image: url(../images/gallery/IMG_9159.jpg);  
-  }
-    60%{
-        background-image: url(../images/gallery/IMG_9283.jpg);  
-  }
-    80%{
-        background-image: url(../images/gallery/IMG_9210.jpg);  
-  }
-    100%{
-        background-image: url(../images/gallery/IMG_9177.jpg);
-    }
-  }
+
+#close {
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+  cursor: pointer;
+  height: 5vh;
+}
+#prev, #next {
+  font-size: 5vh;
+  cursor: pointer;
+  margin: 3.5vh;
+}
+
+
 .music {
     background-color: #37297be4;
     width: 80vw;
@@ -507,6 +490,13 @@ filter: saturate(70%) hue-rotate(-90deg);
     }
     .contact-us {
         max-height: none;
+    }
+    #lightbox img {
+        width: 90vw;
+        height: auto;
+    }
+  #prev, #next {
+      margin: 3vw;
     }
 }
 html {
