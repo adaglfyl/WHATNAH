@@ -5,7 +5,9 @@
 * {
     box-sizing: border-box;
 }
-
+a {
+    user-select: none;
+}
 a:link {
     color: #fffec2;
     text-decoration: none;
@@ -37,6 +39,10 @@ main {
 @keyframes fadein {
     0% { opacity: 0; }
     50% { opacity: 1; }
+}
+@keyframes fadeout {
+    0% {opacity: 1; }
+    50% {opacity: 0; }
 }
 .wrapper {
     background-image: url(../images/Scintilla.png);
@@ -227,24 +233,42 @@ h3 {
     background-color: #37297bc8;
     border-radius: 10px;
     padding: 0.75rem;
+    position: relative;
   }
-  .frame {
+.frame {
     padding: 0.5em;
+    overflow: hidden;
+    position: relative;
   }
-  .frame img {
+.gallery-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     align-items: top center;
-    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+.gallery-img-container {
     position: relative;
+    height: 100%;
+    width: 100%;
     border: 2px solid #7067d1;
     border-radius: 20px;
-    cursor: pointer;
-  }
-  .frame img:hover {
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.show {
+    opacity: 1;
+}
+  .gallery-img-container:hover {
     transform: scale(105%);
-    z-index: 999;
+    z-index: 900;
     border: 3px solid #a29dde;
   }
   .top-row {
@@ -255,7 +279,6 @@ h3 {
     float: left;
     height: 100%;
     width: 33%;
-   
   }
   .top-right {
     top: 0;
