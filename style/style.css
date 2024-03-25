@@ -369,10 +369,6 @@ h3 {
     font-size: clamp(10px,  5vh, 35px);
     padding: none;
     word-break: break-word;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    line-height: 1.5;
 }
 
 #contact-table {
@@ -381,6 +377,10 @@ h3 {
     margin: 0;
     padding: none;
     overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    line-height: 1.5;
 }
 .contact-us h4 {
     font-size: clamp(12px, 7vh , 40px);
