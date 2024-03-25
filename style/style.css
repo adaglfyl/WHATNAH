@@ -377,7 +377,7 @@ h3 {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
     padding: none;
     overflow: hidden;
     line-height: 1.5;
@@ -526,8 +526,8 @@ filter: saturate(70%) hue-rotate(-90deg);
     #contact-table {
       flex-flow: column nowrap;
       align-items: center;
-      justify-content: space evenly;
-      margin: auto;
+      justify-content: space-between;
+      margin: none;
     }
          td {
            text-align: center;
