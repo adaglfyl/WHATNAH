@@ -477,7 +477,7 @@ filter: saturate(70%) hue-rotate(-90deg);
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    .navbar li  {
+    .navbar a {
         width: 49%;
         max-width: 150px;
         font-size: 30px;
