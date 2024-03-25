@@ -363,6 +363,7 @@ h3 {
     border-radius: 20px;
     width: 70vw;
     min-width: 150px;
+    max-width: 700px;
     height: auto;
     margin: auto;
     font-size: clamp(10px,  5vh, 35px);
@@ -390,7 +391,7 @@ h3 {
   width: 100%;
 }
 .contact-us td{
-  padding: 5px;
+  padding: 2px;
   text-align: left;
 }
 .align-left {
