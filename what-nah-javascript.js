@@ -117,12 +117,15 @@ next.addEventListener('click', e => {
       ImageIndex = (ImageIndex + 1) % images.length;
     const nextImage = images[ImageIndex];
   const lightboxImage = document.querySelector('#lightbox img'); 
+  lightboxImage.style.animation = "fadein-side 1s linear forwards";
   lightboxImage.src = nextImage.src;
 })
 prev.addEventListener('click', e => {
       ImageIndex = (ImageIndex - 1 + images.length) % images.length;
     const prevImage = images[ImageIndex];
-  const lightboxImage = document.querySelector('#lightbox img'); 
+  const lightboxImage = document.querySelector('#lightbox img');
+  lightboxImage.classList.add('slide-right');
   lightboxImage.src = prevImage.src;
+  lightboxImage.classList.remove('slide-right');
 })
 //Keyboard functionality for Lightbox needed
