@@ -512,7 +512,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     opacity: 1;
 }
 .dots {
-  width: 50vw;
+  width: 100vw;
   height: auto;
   pointer-events: none;
   opacity: 0;
@@ -523,6 +523,8 @@ filter: saturate(70%) hue-rotate(-90deg);
   align-self: center;
   gap: 30px;
   margin: auto;
+  left: 0;
+  right: 0;
   margin-top: 7vh;
   position: absolute;
   transition: 0.5s ease-in-out;
