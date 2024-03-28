@@ -495,22 +495,6 @@ filter: saturate(70%) hue-rotate(-90deg);
     pointer-events: all;
     opacity: 1;
 }
-.transition-1 {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-color: #36297b;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s ease-in-out;
-}
-.transition-1.is-active {
-    pointer-events: all;
-    opacity: 1;
-}
 .dots {
   width: 100vw;
   height: auto;
@@ -520,12 +504,10 @@ filter: saturate(70%) hue-rotate(-90deg);
   transition: 0.5s ease-in-out;
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   gap: 30px;
-  margin: auto;
   left: 0;
   right: 0;
-  margin-top: 7vh;
   position: absolute;
   transition: 0.5s ease-in-out;
 }
