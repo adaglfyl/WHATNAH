@@ -1,6 +1,6 @@
 //Transitions between pages
 window.onload = () => {
-    const anchors = document.querySelectorAll('a');
+    const anchors = document.querySelectorAll('.nav-button');
     const transition_el = document.querySelector('.transition');
     const loading = document.querySelector('.dots');
   
