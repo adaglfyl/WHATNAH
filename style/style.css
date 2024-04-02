@@ -1,3 +1,4 @@
+/*Custom Font and mobile optimisation*/
 @font-face {
     font-family: "NaomisHand";
     src: url(./NaomisHand-Regular.ttf);
@@ -9,6 +10,7 @@ a, img {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+/*Styling links*/
 a:link {
     color: #fffec2;
     text-decoration: none;
@@ -23,6 +25,7 @@ a:active {
 a:hover {
     color:#ffffff;
 }
+/*Overarching style*/
 body {
     margin: 0;
     padding: 0;
@@ -33,6 +36,407 @@ body {
     overflow: auto;
     height: 100%;
 } 
+.wrapper {
+    background-image: url(../images/Scintilla.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: local;
+    overflow: auto;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+.logo-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 27vh;
+}
+.logo{ 
+    background-blend-mode: unset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+    width: 95vw;
+    max-width: 600px;
+    z-index: 10;
+}
+.header {
+    font-size: 70px;
+    margin: 0;
+}
+/*Navbar & nav buttons*/
+.navbar ul {
+    font-family: "NaomisHand";
+    font-size: 1em;
+    font-weight: lighter;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 75vw;
+    /*max-width: 600px;< trying without this for larger displays. */
+    margin-bottom: 0;
+}
+.nav-button {
+    border: 2px solid #a29dde;
+    background-color: #7067d1;
+    border-radius: 30px;
+    padding: 2px 5px;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease-in-out;
+}
+.nav-button:hover {
+    transform: scale(1.1);
+    background-color: #a29dde;
+    border: 2px solid white;
+}
+/*About Page*/
+.aboutus {
+    font-family: "NaomisHand";
+    font-size: clamp(30px,  10vw, 40px);
+    margin-top: 1rem;
+    padding: 1rem 1rem 0.25em 1rem;
+    background-color: #37297be4;
+    border-radius: 30px;
+}
+.about {
+  width: 90vw;
+  max-width: 700px;
+  color: #fffec2;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border-radius: 30px;
+}
+#band-picture {
+    max-width: 700px;
+    width: 90vw;
+    border-radius: 20px;
+    border: 3px solid #a29dde;
+}
+/*Home Page/Index*/
+.homepage {
+    width: 90vw;
+    background-color: #37297be4;
+    border-radius: 30px;
+    color: #fffec2;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 400px;
+    font-size: 3.5rem;
+    font-family: "NaomisHand";
+    line-height: 0.05rem;
+    margin: 0;
+    justify-content: center;
+  }
+.homepage p {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+.video-div {
+    width: 60vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 640px;
+    max-height: 75%;
+    min-width: 300px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+#video-embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px solid #7067d1;
+    border-radius: 20px;
+}
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+/*Merch Page*/
+.merch-page {
+    width: 90vw;
+    max-width: 700px;
+    font-size: clamp(10px,  10vw, 40px);
+    background-color: #37297bc8;
+    border-radius: 20px;
+    line-height: 0.5;
+    margin: 1rem;
+}
+#merch-picture {
+    max-width: 900px;
+    min-height: 300px;
+    width: 60vh;
+    height: 60vh;
+    background-image: url(../images/camomile-sea-tshirt.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    border: 3px solid #a29dde;
+  }
+#merch-link {
+    transition: all 0.5s ease-in-out;
+}
+#merch-link:hover{
+    border-radius: 40px;
+    font-size: 120%;
+}
+h3 {
+    font-size: clamp(20px, 10vw, 50px);
+    margin: 1rem 0 2rem 0;
+
+}
+/*Gigs Page*/
+.gigs {
+    margin-top: -20px;
+}
+.gigs-info {
+    width: 70vw;
+    max-width: 700px;
+    font-size: clamp(20px,  10vw, 35px);
+    background-color: #37297bc8;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+    padding: auto;
+}
+/*Lightbox & gallery styling*/
+.gallery-container {
+    width: 90vw;
+    max-width: 80vh;
+    aspect-ratio: 1 / 1 !important;
+    margin: 1rem auto;
+    align-items: center;
+    background-color: #37297bc8;
+    border-radius: 10px;
+    padding: 0.75rem;
+    position: relative;
+  }
+.frame {
+    padding: 0.5em;
+    overflow: hidden;
+    position: relative;
+  }
+.gallery-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    align-items: top center;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+}
+.gallery-img-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #7067d1;
+    border-radius: 20px;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.show {
+    opacity: 1;
+}
+  .gallery-img-container:hover {
+    transform: scale(105%);
+    z-index: 900;
+    border: 3px solid #a29dde;
+  }
+  .top-row {
+    height: 50%;
+  }
+  .top-left {
+    top: 0;
+    float: left;
+    height: 100%;
+    width: 33%;
+  }
+  .top-right {
+    top: 0;
+    float: right;
+    height: 100%;
+    width: 67%;
+  }
+  .bottom-row {
+    height: 50%;
+  }
+  .bottom-left {
+    bottom: 0;
+    float: left;
+    height: 100%;
+    width: 67%;
+    position: relative;
+  }
+  .bottom-right {
+    bottom: 0;
+    float: right;
+    height: 100%;
+    width: 33%;
+    position: relative;
+  }
+  #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #16112be0;
+    display: none;
+}
+#lightbox.active {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+} 
+#lightbox img {
+   height: 85vh;
+   width: auto;
+   max-width: 60vw;
+   object-fit: cover;
+   border-radius: 10px;
+   animation: fadein 0.5s forwards linear;
+}
+#lightbox a:hover {
+    color: #ef8d6b;
+}
+#close {
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+  cursor: pointer;
+  height: 5vh;
+}
+#prev, #next {
+  font-size: 5vh;
+  cursor: pointer;
+  margin: 3.5vh;
+}
+/*Music Page*/
+.music {
+    background-color: #37297be4;
+    width: 80vw;
+    max-width: 800px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    line-height: 0.5;
+    padding: 0.5rem;
+}
+.spotify-embed iframe {
+    margin: 0.5rem;
+}
+/*Contact Page*/
+.contact-us {
+    background-color: #37297be4;
+    border-radius: 20px;
+    width: 65vw;
+    min-width: 150px;
+    max-width: 500px;
+    margin: auto;
+    font-size: clamp(10px,  5vh, 35px);
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.contact-us h4 {
+    font-size: clamp(12px, 8vh , 45px);
+    margin: 0.5rem;
+}
+.contact-us p {
+    margin: 1rem;
+}
+table {
+  width: 60%;
+  word-break: keep-all;
+}
+.align-left {
+  text-align: start;
+  width: 50%;
+}
+.align-right {
+  text-align: end;
+  width: 50%;
+}
+.social-link img{
+    width: 4vh;
+    min-width: 16px;
+    height: auto;
+    margin-right: 5px;
+}
+.social-link:hover {
+    filter: saturate(70%) hue-rotate(-90deg);
+    font-weight: bolder;
+    color:#8CEF6B; /* changed due to hue rotation */
+}
+/*Footer Social/Music Links*/
+.socials-footer {
+    width: 75vw;
+    max-width: 300px;
+    display: inline-block;
+    background-color: #37297be4;
+    margin: 0.5rem;
+    border-radius: 20px;
+    padding: 10px;
+}
+#social-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 0.3em;
+  padding: 0.125em;
+  flex-shrink: 1;
+}
+.social-button {
+    transition: all 0.5s ease-in-out;
+    width: 40px;
+    height: auto;
+}
+.social-button img {
+    max-width: 100%; 
+    height: auto;
+}
+.social-button:hover {
+transform: scale(110%) translate(0,-5px);
+filter: saturate(70%) hue-rotate(-90deg);
+}
+.clicked {
+    background-color: #fffec2;
+}
+/*Overarching style*/
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+/*animations*/
 main {
     opacity: 1;
     animation: fadein-side 1s linear forwards;
@@ -72,412 +476,6 @@ animation: fadeout-side 0.5s linear forwards;
     0% { opacity: 0;}
     50% { opacity: 1; }
 }
-.wrapper {
-    background-image: url(../images/Scintilla.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: local;
-    overflow: auto;
-    min-height: 100%;
-    min-width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-}
-.logo-nav {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 27vh;
-}
-.logo{ 
-    background-blend-mode: unset;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 0.5rem;
-    width: 95vw;
-    max-width: 600px;
-    z-index: 10;
-}
-.header {
-    font-size: 70px;
-    margin: 0;
-}
-
-.navbar ul {
-    font-family: "NaomisHand";
-    font-size: 2rem;
-    font-weight: lighter;
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    width: 75vw;
-    max-width: 600px;
-    margin-bottom: 0;
-}
-.nav-button {
-    border: 2px solid #a29dde;
-    background-color: #7067d1;
-    border-radius: 30px;
-    padding: 2px 5px;
-    margin: 0.5rem 0;
-    transition: all 0.3s ease-in-out;
-}
-.nav-button:hover {
-    transform: scale(1.1);
-    background-color: #a29dde;
-    border: 2px solid white;
-}
-.aboutus {
-    font-family: "NaomisHand";
-    font-size: clamp(30px,  10vw, 40px);
-    margin-top: 1rem;
-    padding: 1rem 1rem 0.25em 1rem;
-    background-color: #37297be4;
-    border-radius: 30px;
-}
-.about {
-  width: 90vw;
-  max-width: 700px;
-  color: #fffec2;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  border-radius: 30px;
-}
-.homepage {
-    width: 90vw;
-    background-color: #37297be4;
-    border-radius: 30px;
-    color: #fffec2;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 400px;
-    font-size: 3.5rem;
-    font-family: "NaomisHand";
-    line-height: 0.05rem;
-    margin: 0;
-    justify-content: center;
-  }
-.homepage p {
-    margin-top: 0.25em;
-    margin-bottom: 0.5em;
-}
-
-.video-div {
-    width: 60vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    max-width: 640px;
-    max-height: 75%;
-    min-width: 300px;
-    margin-bottom: 2rem;
-    position: relative;
-}
-#band-picture {
-    max-width: 700px;
-    width: 90vw;
-    border-radius: 20px;
-    border: 3px solid #a29dde;
-}
-
-#merch-picture {
-  max-width: 900px;
-  min-height: 300px;
-  width: 60vh;
-  height: 60vh;
-  background-image: url(../images/camomile-sea-tshirt.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 20px;
-  border: 3px solid #a29dde;
-}
-
-#video-embed {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border: 2px solid #7067d1;
-    border-radius: 20px;
-}
-.aspect-ratio {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 75%;
-}
-.merch-page {
-    width: 90vw;
-    max-width: 700px;
-    font-size: clamp(10px,  10vw, 40px);
-    background-color: #37297bc8;
-    border-radius: 20px;
-    line-height: 0.5;
-    margin: 1rem;
-}
-#merch-link {
-    transition: all 0.5s ease-in-out;
-}
-#merch-link:hover{
-    border-radius: 40px;
-    font-size: 120%;
-}
-h3 {
-    font-size: clamp(20px, 10vw, 50px);
-    margin: 1rem 0 2rem 0;
-
-}
-.gigs {
-    margin-top: -20px;
-}
-.gigs-info {
-    width: 70vw;
-    max-width: 700px;
-    font-size: clamp(20px,  10vw, 35px);
-    background-color: #37297bc8;
-    border-radius: 10px;
-    margin: 0 auto 0 auto;
-    padding: auto;
-}
-.gallery-container {
-    width: 90vw;
-    max-width: 80vh;
-    aspect-ratio: 1 / 1 !important;
-    margin: 1rem auto;
-    align-items: center;
-    background-color: #37297bc8;
-    border-radius: 10px;
-    padding: 0.75rem;
-    position: relative;
-  }
-.frame {
-    padding: 0.5em;
-    overflow: hidden;
-    position: relative;
-  }
-.gallery-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    align-items: top center;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    position: absolute;
-    transition: all 1s ease-in-out;
-    opacity: 0;
-}
-.gallery-img-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border: 2px solid #7067d1;
-    border-radius: 20px;
-    z-index: 10;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-.show {
-    opacity: 1;
-}
-  .gallery-img-container:hover {
-    transform: scale(105%);
-    z-index: 900;
-    border: 3px solid #a29dde;
-  }
-  .top-row {
-    height: 50%;
-  }
-  .top-left {
-    top: 0;
-    float: left;
-    height: 100%;
-    width: 33%;
-  }
-  .top-right {
-    top: 0;
-    float: right;
-    height: 100%;
-    width: 67%;
-  }
-  .bottom-row {
-    height: 50%;
-  }
-  .bottom-left {
-    bottom: 0;
-    float: left;
-    height: 100%;
-    width: 67%;
-    position: relative;
-   
-  }
-  .bottom-right {
-    bottom: 0;
-    float: right;
-    height: 100%;
-    width: 33%;
-    position: relative;
-  }
-  #lightbox {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #16112be0;
-    display: none;
-}
-#lightbox.active {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-} 
-#lightbox img {
-   height: 85vh;
-   width: auto;
-   max-width: 60vw;
-   object-fit: cover;
-   border-radius: 10px;
-   animation: fadein 0.5s forwards linear;
-}
-
-#lightbox a:hover {
-    color: #ef8d6b;
-}
-
-#close {
-  width: 100%;
-  text-align: center;
-  font-size: 5vh;
-  cursor: pointer;
-  height: 5vh;
-}
-#prev, #next {
-  font-size: 5vh;
-  cursor: pointer;
-  margin: 3.5vh;
-}
-
-.music {
-    background-color: #37297be4;
-    width: 80vw;
-    max-width: 800px;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-    line-height: 0.5;
-    padding: 0.5rem;
-}
-.spotify-embed iframe {
-    margin: 0.5rem;
-}
-
-.contact-us {
-    background-color: #37297be4;
-    border-radius: 20px;
-    width: 65vw;
-    min-width: 150px;
-    max-width: 500px;
-    margin: auto;
-    font-size: clamp(10px,  5vh, 35px);
-    padding: 1rem;
-    overflow: hidden;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.contact-us h4 {
-    font-size: clamp(12px, 8vh , 45px);
-    margin: 0.5rem;
-}
-.contact-us p {
-    margin: 1rem;
-}
-table {
-  width: 60%;
-  word-break: keep-all;
-}
-
-.align-left {
-  text-align: start;
-  width: 50%;
-}
-
-.align-right {
-  text-align: end;
-  width: 50%;
-}
-
-.social-link img{
-    width: 4vh;
-    min-width: 16px;
-    height: auto;
-    margin-right: 5px;
-}
-.social-link:hover {
-    filter: saturate(70%) hue-rotate(-90deg);
-    font-weight: bolder;
-    color:#8CEF6B; /* changed due to hue rotation */
-}
-
-.socials-footer {
-    width: 75vw;
-    max-width: 300px;
-    display: inline-block;
-    background-color: #37297be4;
-    margin: 0.5rem;
-    border-radius: 20px;
-    padding: 10px;
-}
-#social-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 0.3em;
-  padding: 0.125em;
-  flex-shrink: 1;
-}
-.social-button {
-    transition: all 0.5s ease-in-out;
-    width: 40px;
-    height: auto;
-}
-.social-button img {
-    max-width: 100%; 
-    height: auto;
-}
-.social-button:hover {
-transform: scale(110%) translate(0,-5px);
-filter: saturate(70%) hue-rotate(-90deg);
-}
-.clicked {
-    background-color: #fffec2;
-}
-.page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
-}
-
 /*page transitions*/
 .transition-1 {
     position: fixed;
@@ -550,6 +548,7 @@ filter: saturate(70%) hue-rotate(-90deg);
     opacity: 1;
     pointer-events: all;
 }
+/*Responsive Design for smaller screens*/
 @media screen and (max-width: 600px),
        screen and (max-height: 300px),
        screen and (max-aspect-ratio: '1/1') {
@@ -637,7 +636,10 @@ filter: saturate(70%) hue-rotate(-90deg);
         width: 100vw;
     }
 }
-/**/
+/*Important checks*/
 html {
   height: 100%;
+}
+.symbols {
+    font-size: 0.5rem;
 }
