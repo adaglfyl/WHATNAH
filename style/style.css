@@ -76,7 +76,7 @@ body {
 /*Navbar & nav buttons*/
 .navbar ul {
     font-family: "NaomisHand";
-    font-size: 1em;
+    font-size: 2em;
     font-weight: lighter;
     margin-top: 0;
     display: flex;
@@ -85,7 +85,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    width: 75vw;
+    width: 50vw;
     /*max-width: 600px;< trying without this for larger displays. */
     margin-bottom: 0;
 }
