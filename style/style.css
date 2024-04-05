@@ -56,7 +56,6 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
-    min-height: 27vh;
 }
 .logo{ 
     background-blend-mode: unset;
@@ -66,7 +65,7 @@ body {
     padding-top: 0;
     margin-bottom: 0.5rem;
     width: 95vw;
-    max-width: 35rem;
+    max-width: 40rem;
     z-index: 10;
 }
 .header {
@@ -76,7 +75,7 @@ body {
 /*Navbar & nav buttons*/
 .navbar ul {
     font-family: "NaomisHand";
-    font-size: 2rem;
+    font-size: 2.75rem;
     font-weight: lighter;
     margin-top: 0;
     display: flex;
@@ -85,7 +84,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    width: 35rem;
+    width: 37rem;
     /* max-width: 800px; < trying  without this for larger displays. */
     margin-bottom: 0;
 }
@@ -173,9 +172,10 @@ body {
 }
 /*Merch Page*/
 .merch-page {
+    height: 15vh;
     width: 90vw;
     max-width: 700px;
-    font-size: clamp(10px,  10vw, 40px);
+    font-size: clamp(10px, 10vw, 40px);
     background-color: #37297bc8;
     border-radius: 20px;
     line-height: 0.5;
@@ -183,9 +183,9 @@ body {
 }
 #merch-picture {
     max-width: 900px;
-    min-height: 300px;
-    width: 60vh;
-    height: 60vh;
+    min-height: 150px;
+    width: 30%;
+    height: 25vh;
     background-image: url(../images/camomile-sea-tshirt.png);
     background-size:cover;
     background-repeat: no-repeat;
@@ -212,18 +212,17 @@ h3 {
 .gigs-info {
     width: 70vw;
     max-width: 700px;
-    font-size: clamp(20px,  10vw, 35px);
+    font-size: clamp(16px,  8vw, 35px);
     background-color: #37297bc8;
     border-radius: 10px;
     margin: 0 auto 0 auto;
-    padding: auto;
 }
 /*Lightbox & gallery styling*/
 .gallery-container {
-    width: 90vw;
+    max-height: 60vh;
     max-width: 80vh;
     aspect-ratio: 1 / 1 !important;
-    margin: 1rem auto;
+    margin: 0 auto;
     align-items: center;
     background-color: #37297bc8;
     border-radius: 10px;
