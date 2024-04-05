@@ -66,7 +66,7 @@ body {
     padding-top: 0;
     margin-bottom: 0.5rem;
     width: 95vw;
-    max-width: 600px;
+    max-width: 35rem;
     z-index: 10;
 }
 .header {
@@ -76,7 +76,7 @@ body {
 /*Navbar & nav buttons*/
 .navbar ul {
     font-family: "NaomisHand";
-    font-size: 2.5em;
+    font-size: 2rem;
     font-weight: lighter;
     margin-top: 0;
     display: flex;
@@ -85,7 +85,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    width: 45vw;
+    width: 35rem;
     /* max-width: 800px; < trying  without this for larger displays. */
     margin-bottom: 0;
 }
@@ -107,7 +107,7 @@ body {
     font-family: "NaomisHand";
     font-size: clamp(30px,  10vw, 40px);
     margin-top: 1rem;
-    padding: 1rem 1rem 0.25em 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
     background-color: #37297be4;
     border-radius: 30px;
 }
