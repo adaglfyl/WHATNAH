@@ -1,41 +1,56 @@
-/*Custom Font and mobile optimisation*/
+/*Custom Font, color variables, and mobile optimisation*/
 @font-face {
     font-family: "NaomisHand";
     src: url(./NaomisHand-Regular.ttf);
 }
+
+:root {
+    --dark-purple: #36297b;
+    --medium-purple: #7067d1;
+    --light-purple: #a29dde;
+    --ivory: #fffec2;
+    --orange: #ef8d6b;
+    --translucent-purple: #37297bc8;
+    --dark-translucent-purple: #37297be4;
+}
+
 * {
     box-sizing: border-box;
 }
-a, img {
+
+a,
+img {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
 /*Styling links*/
 a:link {
-    color: #fffec2;
+    color: var(--ivory);
     text-decoration: none;
- }
-a:visited {
-    color: #fffec2;
-    text-decoration: none;
- }
-a:active {
-    color: #ef8d6b;
- }
-a:hover {
-    color:#ffffff;
 }
+
+a:visited {
+    color: var(--ivory);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
 /*Overarching style*/
 body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #36297b;
-    color:#fffec2;
+    background-color: var(--dark-purple);
+    color: var(--ivory);
     font-family: "NaomisHand";
     overflow: auto;
     height: 100%;
-} 
+}
+
 .wrapper {
     background-image: url(../images/Scintilla.png);
     background-size: cover;
@@ -51,13 +66,15 @@ body {
     align-items: center;
     position: absolute;
 }
+
 .logo-nav {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
 }
-.logo{ 
+
+.logo {
     background-blend-mode: unset;
     margin-left: auto;
     margin-right: auto;
@@ -68,10 +85,12 @@ body {
     max-width: 40rem;
     z-index: 10;
 }
+
 .header {
     font-size: 70px;
     margin: 0;
 }
+
 /*Navbar & nav buttons*/
 .navbar ul {
     font-family: "NaomisHand";
@@ -88,49 +107,61 @@ body {
     /* max-width: 800px; < trying  without this for larger displays. */
     margin-bottom: 0;
 }
+
 .nav-button {
-    border: 2px solid #a29dde;
-    background-color: #7067d1;
+    border: 2px solid var(--light-purple);
+    background-color: var(--medium-purple);
     border-radius: 30px;
     padding: 2px 5px;
     margin: 0.5rem 0.25rem;
     transition: all 0.3s ease-in-out;
 }
+
 .nav-button:hover {
     transform: scale(1.1);
-    background-color: #a29dde;
+    background-color: var(--light-purple);
     border: 2px solid white;
 }
+
+.nav-button:active {
+    border: 2px solid var(--medium-purple);
+    color: var(--medium-purple);
+}
+
 /*About Page*/
 .aboutus {
     font-family: "NaomisHand";
-    font-size: clamp(30px,  10vw, 40px);
+    font-size: clamp(30px, 10vw, 40px);
     margin-top: 1rem;
     padding: 1rem 1rem 0.5rem 1rem;
-    background-color: #37297be4;
+    background-color: var(--dark-translucent-purple);
     border-radius: 30px;
 }
+
 .about {
-  width: 90vw;
-  max-width: 700px;
-  color: #fffec2;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  border-radius: 30px;
+    width: 90vw;
+    max-width: 700px;
+    color: var(--ivory);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-radius: 30px;
 }
+
 #band-picture {
     max-width: 700px;
-    width: 90vw;
+    height: 35vh;
     border-radius: 20px;
-    border: 3px solid #a29dde;
+    margin-top: 1rem;
+    border: 3px solid var(--light-purple);
 }
+
 /*Home Page/Index*/
 .homepage {
     width: 90vw;
-    background-color: #37297be4;
+    background-color: var(--dark-translucent-purple);
     border-radius: 30px;
-    color: #fffec2;
+    color: var(--ivory);
     padding-left: 0;
     padding-right: 0;
     max-width: 400px;
@@ -139,11 +170,13 @@ body {
     line-height: 0.05rem;
     margin: 0;
     justify-content: center;
-  }
+}
+
 .homepage p {
     margin-top: 0.25em;
     margin-bottom: 0.5em;
 }
+
 .video-div {
     width: 60vh;
     height: auto;
@@ -155,68 +188,78 @@ body {
     margin-bottom: 2rem;
     position: relative;
 }
+
 #video-embed {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    border: 2px solid #7067d1;
+    border: 2px solid var(--medium-purple);
     border-radius: 20px;
 }
+
 .aspect-ratio {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 75%;
 }
+
 /*Merch Page*/
 .merch-page {
     height: 15vh;
     width: 90vw;
     max-width: 700px;
     font-size: clamp(10px, 10vw, 40px);
-    background-color: #37297bc8;
+    background-color: var(--translucent-purple);
     border-radius: 20px;
     line-height: 0.5;
     margin: 1rem;
 }
+
 #merch-picture {
     max-width: 600px;
     min-height: 150px;
     width: 35vw;
     height: 35vh;
     background-image: url(../images/camomile-sea-tshirt.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
-    border: 3px solid #a29dde;
-  }
+    border: 3px solid var(--light-purple);
+}
+
 #merch-link {
     transition: all 0.5s ease-in-out;
 }
-#merch-link:hover{
+
+#merch-link:hover {
     border-radius: 40px;
-    font-size: 120%;
+    color: var(--orange);
 }
+
 h3 {
     font-size: clamp(20px, 10vw, 50px);
     margin: 1rem 0 2rem 0;
 
 }
+
 /*Gigs Page*/
 .gigs {
     margin-top: -20px;
 }
+
 .gigs-info {
     width: 70vw;
     max-width: 700px;
-    font-size: clamp(16px,  8vw, 35px);
-    background-color: #37297bc8;
+    font-size: clamp(16px, 8vw, 35px);
+    background-color: var(--translucent-purple);
     border-radius: 10px;
     margin: 0 auto 0 auto;
 }
+
 /*Lightbox & gallery styling*/
 .gallery-container {
     max-height: 50vh;
@@ -224,16 +267,18 @@ h3 {
     aspect-ratio: 1 / 1 !important;
     margin: 0 auto;
     align-items: center;
-    background-color: #37297bc8;
+    background-color: var(--translucent-purple);
     border-radius: 10px;
     padding: 0.75rem;
     position: relative;
-  }
+}
+
 .frame {
     padding: 0.5em;
     overflow: hidden;
     position: relative;
-  }
+}
+
 .gallery-img {
     height: 100%;
     width: 100%;
@@ -246,57 +291,67 @@ h3 {
     transition: all 1s ease-in-out;
     opacity: 0;
 }
+
 .gallery-img-container {
     position: relative;
     height: 100%;
     width: 100%;
-    border: 2px solid #7067d1;
+    border: 2px solid var(--medium-purple);
     border-radius: 20px;
     z-index: 10;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 }
+
 .show {
     opacity: 1;
 }
-  .gallery-img-container:hover {
+
+.gallery-img-container:hover {
     transform: scale(105%);
     z-index: 900;
-    border: 3px solid #a29dde;
-  }
-  .top-row {
+    border: 3px solid var(--light-purple);
+}
+
+.top-row {
     height: 50%;
-  }
-  .top-left {
+}
+
+.top-left {
     top: 0;
     float: left;
     height: 100%;
     width: 33%;
-  }
-  .top-right {
+}
+
+.top-right {
     top: 0;
     float: right;
     height: 100%;
     width: 67%;
-  }
-  .bottom-row {
+}
+
+.bottom-row {
     height: 50%;
-  }
-  .bottom-left {
+}
+
+.bottom-left {
     bottom: 0;
     float: left;
     height: 100%;
     width: 67%;
     position: relative;
-  }
-  .bottom-right {
+}
+
+.bottom-right {
     bottom: 0;
     float: right;
     height: 100%;
     width: 33%;
     position: relative;
-  }
-  #lightbox {
+}
+
+#lightbox {
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -305,35 +360,41 @@ h3 {
     background-color: #16112be0;
     display: none;
 }
+
 #lightbox.active {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-} 
-#lightbox img {
-   height: 85vh;
-   width: auto;
-   max-width: 60vw;
-   object-fit: cover;
-   border-radius: 10px;
-   animation: fadein 0.5s forwards linear;
 }
+
+#lightbox img {
+    height: 85vh;
+    width: auto;
+    max-width: 60vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 #lightbox a:hover {
     color: #ef8d6b;
 }
+
 #close {
-  width: 100%;
-  text-align: center;
-  font-size: 5vh;
-  cursor: pointer;
-  height: 5vh;
+    width: 100%;
+    text-align: center;
+    font-size: 5vh;
+    cursor: pointer;
+    height: 5vh;
 }
-#prev, #next {
-  font-size: 5vh;
-  cursor: pointer;
-  margin: 3.5vh;
+
+#prev,
+#next {
+    font-size: 5vh;
+    cursor: pointer;
+    margin: 3.5vh;
 }
+
 /*Music Page*/
 .music-page {
     align-items: center;
@@ -342,8 +403,9 @@ h3 {
     justify-content: space-evenly;
     gap: 1rem;
 }
+
 .music {
-    background-color: #37297be4;
+    background-color: var(--dark-translucent-purple);
     width: 80vw;
     max-width: 500px;
     margin-bottom: 1rem;
@@ -351,18 +413,20 @@ h3 {
     line-height: 0.5;
     padding: 0.5rem;
 }
+
 .spotify-embed iframe {
     margin: 0.5rem;
 }
+
 /*Contact Page*/
 .contact-us {
-    background-color: #37297be4;
+    background-color: var(--dark-translucent-purple);
     border-radius: 20px;
     width: 65vw;
     min-width: 150px;
     max-width: 500px;
     margin: auto;
-    font-size: clamp(10px,  5vh, 35px);
+    font-size: clamp(10px, 5vh, 35px);
     padding: 1rem;
     overflow: hidden;
     display: flex;
@@ -370,70 +434,85 @@ h3 {
     justify-content: space-evenly;
     align-items: flex-start;
 }
+
 .contact-us h4 {
-    font-size: clamp(12px, 8vh , 45px);
+    font-size: clamp(12px, 8vh, 45px);
     margin: 0.5rem;
 }
+
 .contact-us p {
     margin: 1rem;
 }
+
 table {
-  width: 60%;
-  word-break: keep-all;
+    width: 60%;
+    word-break: keep-all;
 }
+
 .align-left {
-  text-align: start;
-  width: 50%;
+    text-align: start;
+    width: 50%;
 }
+
 .align-right {
-  text-align: end;
-  width: 50%;
+    text-align: end;
+    width: 50%;
 }
-.social-link img{
+
+.social-link img {
     width: 4vh;
     min-width: 16px;
     height: auto;
     margin-right: 5px;
 }
+
 .social-link:hover {
     filter: saturate(70%) hue-rotate(-90deg);
     font-weight: bolder;
-    color:#8CEF6B; /* changed due to hue rotation */
+    color: #8CEF6B;
+    /* changed due to hue rotation */
 }
+
 /*Footer Social/Music Links*/
 .socials-footer {
     width: 75vw;
     max-width: 300px;
     display: inline-block;
-    background-color: #37297be4;
+    background-color: var(--translucent-purple);
     margin: 0.5rem;
     border-radius: 20px;
     padding: 10px;
 }
+
 #social-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 0.3em;
-  padding: 0.125em;
-  flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.3em;
+    padding: 0.125em;
+    flex-shrink: 1;
 }
+
 .social-button {
     transition: all 0.5s ease-in-out;
     width: 40px;
     height: auto;
 }
+
 .social-button img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
+
 .social-button:hover {
-transform: scale(110%) translate(0,-5px);
-filter: saturate(70%) hue-rotate(-90deg);
+    transform: scale(110%) translate(0, -5px);
+    filter: saturate(70%) hue-rotate(-90deg);
 }
+
 .clicked {
-    background-color: #fffec2;
+    background-color: var(--ivory);
 }
+
 /*Overarching style*/
 .page {
     display: flex;
@@ -443,122 +522,206 @@ filter: saturate(70%) hue-rotate(-90deg);
     z-index: 2;
     min-height: 70vh;
 }
+
 /*animations*/
 main {
     opacity: 1;
     animation: fadein-side 1s linear forwards;
     z-index: 2;
 }
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein-side {
+    0% {
+        opacity: 0;
+        transform: translate(10vw, 0);
+    }
+
+    50% {
+        transform: translate(5vw, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein-otherside {
+    0% {
+        opacity: 0;
+        transform: translate(-10vw, 0);
+    }
+
+    50% {
+        transform: translate(-5vw, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout-side {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-20rem, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout-otherside {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(20rem, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 .fade-out {
     animation: fadeout 2s linear forwards
 }
-@keyframes fadein-bottom {
-    0% { opacity: 0;
-      transform: translate(0, 10vh);}
-    50% { transform: translate(0, 5vh);
-        opacity: 0.25;
-    }
-    100% { opacity: 1; }
+
+.fade-in {
+    animation: fadein 0.5s linear forwards
 }
-@keyframes fadein-side {
-    0% { opacity: 0;
-      transform: translate(10vw, 0);}
-    50% { transform: translate(5vw, 0);
-        opacity: 0.5;
-    }
-    100% { opacity: 1; }
+
+.fadein-side {
+    animation: fadein-side 1s ease forwards;
 }
-@keyframes fadeout-side {
-    0% { opacity: 1;}
-    100% { transform: translate(-100vw, 0);
-        opacity: 0;}
-}
-.slide-left {
-    animation: fadein-side 1s linear forwards;
-}
+
 .fadeout-side {
-animation: fadeout-side 0.5s linear forwards;
+    animation: fadeout-side 1s ease forwards;
 }
-@keyframes fadein{
-    0% { opacity: 0;}
-    50% { opacity: 1; }
-}
+
 /*page transitions*/
 .transition-1 {
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: #36297b;
+    background-color: var(--dark-purple);
     opacity: 0;
     pointer-events: none;
     transition: 1s ease-in-out;
 }
+
 .transition-1.is-active {
     pointer-events: all;
     opacity: 1;
 }
+
 .dots {
-  width: 100vw;
-  height: auto;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 1000;
-  transition: 0.5s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  left: 0;
-  right: 0;
-  position: absolute;
-  transition: 0.5s ease-in-out;
+    width: 100vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: 0.5s ease-in-out;
 }
+
 .dot-1 {
-  width: 20px;
-  height: 20px;
-  background-color:#7067d1;
-  border: 2px solid #a29dde;
-  border-radius: 100%;
-  animation: bounce 1s linear infinite ;
+    width: 20px;
+    height: 20px;
+    background-color: var(--medium-purple);
+    border: 2px solid var(--light-purple);
+    border-radius: 100%;
+    animation: bounce 1s linear infinite;
 }
+
 .dot-2 {
-  width: 20px;
-  height: 20px;
-  background-color:#7067d1;
-  border: 2px solid #a29dde;
-  border-radius: 100%;
-  animation: bounce 1s linear 0.3s infinite;
+    width: 20px;
+    height: 20px;
+    background-color: var(--medium-purple);
+    border: 2px solid var(--light-purple);
+    border-radius: 100%;
+    animation: bounce 1s linear 0.3s infinite;
 }
+
 .dot-3 {
     width: 20px;
     height: 20px;
-    background-color:#7067d1;
-    border: 2px solid #a29dde;
+    background-color: var(--medium-purple);
+    border: 2px solid var(--light-purple);
     border-radius: 100%;
-    animation: bounce 1s linear 0.6s infinite ;
+    animation: bounce 1s linear 0.6s infinite;
 }
+
 @keyframes bounce {
-    0% {
-    }
-    25%{
+    0% {}
+
+    25% {
         transform: translateY(10px);
     }
+
     50% {
         transform: translateY(0px);
     }
-    75% {transform: translateY(-10px);}
+
+    75% {
+        transform: translateY(-10px);
+    }
 }
+
 .dots.is-active {
     opacity: 1;
     pointer-events: all;
 }
+
 /*Responsive Design for smaller screens*/
 @media screen and (max-width: 600px),
-       screen and (max-height: 300px),
-       screen and (max-aspect-ratio: '1/1') {
+screen and (max-height: 300px),
+screen and (max-aspect-ratio: '1/1') {
     .wrapper {
         background-image: url(../images/Scintilla-small.png);
         background-size: cover;
@@ -568,85 +731,111 @@ animation: fadeout-side 0.5s linear forwards;
         height: auto;
         min-height: 100%;
     }
+
     .page {
         height: 100%;
         align-items: center;
         justify-content: space-evenly;
     }
+
     .navbar ul {
         width: 80vw;
         align-content: space-evenly;
         align-items: center;
     }
+
     .navbar {
         width: 100%;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+
     .navbar a {
         width: 40%;
         max-width: 150px;
         font-size: 30px;
     }
+
     .header {
         font-size: 3rem;
     }
+
     #social-buttons {
         max-width: 250px;
     }
+
     .homepage {
-      width: fit-content;
-      max-width: 400px;
-      margin-top: 1.5rem;
-      padding: 0.5rem;
-      font-size: 2.5em;
+        width: fit-content;
+        max-width: 400px;
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2.5em;
     }
+
     .aspect-ratio {
         position: relative;
         width: 80%;
         height: 0;
         padding-bottom: 60%;
     }
+
     .video-div {
         width: 90vw;
         margin-bottom: 0;
     }
+
     #merch-picture {
         min-width: none;
         min-height: none;
         width: 60vw;
         height: 40vw;
     }
+
     #lightbox img {
         width: 90vw;
         height: auto;
     }
-    #prev, #next {
-      margin: 3vw;
+
+    #prev,
+    #next {
+        margin: 3vw;
     }
+
     .contact-us {
-      max-width: fit-content;
+        max-width: fit-content;
     }
+
     .align-left {
-      text-align: center;
-      width: 100%;
+        text-align: center;
+        width: 100%;
     }
+
     table {
         margin: auto;
         max-width: 20vw;
     }
+
     .align-right {
-      text-align: center;
-      width: 100%;
-     }
+        text-align: center;
+        width: 100%;
+    }
+
     .dots {
         width: 100vw;
     }
 }
+
 /*Important checks*/
 html {
-  height: 100%;
+    height: 100%;
 }
+
 .symbols {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.symbol {
+    font-size: 1.5rem;
+    vertical-align: top;
 }
